@@ -82,14 +82,10 @@ Forms will show immediate visual warnings and error logs when input requirements
 
 ## 📸 Screenshots
 
-### Login Screen
-![Login Screen](screenshots/login.png)
-
-### Rating Submission
-![Rating Submission](screenshots/rating.png)
-
-### Store Dashboard
-![Store Dashboard](screenshots/store-dashboard.png)
-
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
+### Application Views
+![Screenshot 1](screenshots/a.png)
+![Screenshot 2](screenshots/d.png)
+![Screenshot 3](screenshots/f.png)
+![Screenshot 4](screenshots/g.png)
+![Screenshot 5](screenshots/h.png)
+![Screenshot 6](screenshots/s.png)
