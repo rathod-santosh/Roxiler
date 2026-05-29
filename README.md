@@ -77,3 +77,19 @@ Forms will show immediate visual warnings and error logs when input requirements
 - **Passwords** must be **8 to 16 characters**, with at least 1 uppercase and 1 special symbol (e.g., *Password123!*).
 - **Email** must conform to standard email formatting conventions.
 - **Address** is capped at a maximum of **400 characters**.
+
+---
+
+## 📸 Screenshots
+
+### Login Screen
+![Login Screen](screenshots/login.png)
+
+### Rating Submission
+![Rating Submission](screenshots/rating.png)
+
+### Store Dashboard
+![Store Dashboard](screenshots/store-dashboard.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
