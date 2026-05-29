@@ -80,12 +80,25 @@ exports.submitRating = async (req, res) => {
       });
     }
 
-    // 2. Insert or update rating
-    await pool.query(`
-      INSERT INTO ratings (user_id, store_id, rating) 
-      VALUES (?, ?, ?) 
-      ON DUPLICATE KEY UPDATE rating = ?
-    `, [userId, storeId, rating, rating]);
+    // 2. Insert or update rating (portable for both SQLite and MySQL)
+    const [existingRating] = await pool.query(
+      'SELECT id FROM ratings WHERE user_id = ? AND store_id = ?',
+      [userId, storeId]
+    );
+
+    if (existingRating.length > 0) {
+      // Update existing rating
+      await pool.query(
+        'UPDATE ratings SET rating = ? WHERE user_id = ? AND store_id = ?',
+        [rating, userId, storeId]
+      );
+    } else {
+      // Insert new rating
+      await pool.query(
+        'INSERT INTO ratings (user_id, store_id, rating) VALUES (?, ?, ?)',
+        [userId, storeId, rating]
+      );
+    }
 
     res.status(200).json({
       success: true,
